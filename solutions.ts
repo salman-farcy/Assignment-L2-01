@@ -13,4 +13,18 @@ function reverseString(value : string) : string {
      return value.split('').reverse().join('');
 }
 const revString = reverseString("salmanfarcy")
-console.log(revString)
+// console.log(revString)
+
+
+
+//* Problem 3
+type StringOrNumber = string | number;
+function checkType (value : StringOrNumber ) : string{
+    if(typeof value === "string"){
+          return "String";
+    }else{
+          return "Number"
+    }
+}
+
+// console.log(checkType("asdjfla"))
