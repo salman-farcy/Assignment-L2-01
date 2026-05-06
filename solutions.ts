@@ -8,3 +8,9 @@ const result = filterEvenNumbers(numberDigit)
 
 
 
+//* Problem 2
+function reverseString(value : string) : string {
+     return value.split('').reverse().join('');
+}
+const revString = reverseString("salmanfarcy")
+console.log(revString)
