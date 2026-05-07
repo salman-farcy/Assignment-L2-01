@@ -3,17 +3,12 @@
 function filterEvenNumbers(number : number[]) : number[] {
      return number.filter(n => n % 2 === 0 && n !== 0)
 }
-const numberDigit = [0, 1, 3, 8, 6, 4, 0, 2, 10, 12, 9];
-const result = filterEvenNumbers(numberDigit)
-
 
 
 //* Problem 2
 function reverseString(value : string) : string {
      return value.split('').reverse().join('');
 }
-const revString = reverseString("salmanfarcy")
-
 
 
 
@@ -29,20 +24,15 @@ function checkType (value : StringOrNumber ) : string{
 
 
 
-
-
 //* Problem 4
-function getProperty <T, K extends keyof T> (obj : T , key : K) : T[K] {
-     return obj[key];
-}
 const user = {
      id: 4,
      name: "salman farcy",
      age: 26,
 }
-
-const result6 = getProperty(user, 'name')
-
+function getProperty <T, K extends keyof T> (obj : T , key : K) : T[K] {
+     return obj[key];
+}
 
 
 
@@ -51,21 +41,18 @@ interface Book {
      title: string;
      author: string;
      publishedYear: number;
-}
-interface BookWithStatus extends Book {
-     isRead: boolean
+     isRead?: boolean;
 }
 const book : Book = {
      title: "TypeScript Guide",
      author: "Jane Doe",
      publishedYear: 2024,
+     isRead: true,
 }
 
-function toggleReadStatus (value : Book) : BookWithStatus {
-     return {...value, isRead: true}
+function toggleReadStatus (value : Book) : Book {
+     return {...value, isRead: !value.isRead,}
 }
-const result7 = toggleReadStatus(book)
-
 
 
 //* Problem 6
@@ -94,10 +81,9 @@ const student = new Student("Alice", 20, "A")
 
 
 
-
 //* Problem 7
 function getIntersection (value1 : number[], value2 : number[]) : number[] {
     return value1.filter((num) => value2.includes(num))
 }
-const result8 = getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]) ;
+
   
