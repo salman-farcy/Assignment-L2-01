@@ -42,7 +42,7 @@ const user = {
 }
 
 const result6 = getProperty(user, 'name')
-console.log(result6)
+// console.log(result6)
 
 
 
@@ -91,5 +91,13 @@ class Student extends Person {
      }
 }
 const student = new Student("Alice", 20, "A")
-console.log(student.getDetails())
+// console.log(student.getDetails())
 
+
+
+//* Problem 7
+function getIntersection (value1 : number[], value2 : number[]) : number[] {
+    return value1.filter((num) => value2.includes(num))
+}
+const result8 = getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]) ;
+console.log(result8)  
