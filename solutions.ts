@@ -65,4 +65,31 @@ function toggleReadStatus (value : Book) : BookWithStatus {
      return {...value, isRead: true}
 }
 const result7 = toggleReadStatus(book)
-console.log(result7)
+// console.log(result7)
+
+
+//* Problem 6
+class Person {
+     name: string;
+     age: number;
+
+     constructor(name: string, age: number){
+          this.name = name;
+          this.age = age
+     }
+}
+class Student extends Person {
+     grade: string
+
+     constructor (name: string, age: number, grade: string){
+          super(name, age)
+          this.grade = grade
+     }
+
+     getDetails(): string {
+          return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
+     }
+}
+const student = new Student("Alice", 20, "A")
+console.log(student.getDetails())
+
