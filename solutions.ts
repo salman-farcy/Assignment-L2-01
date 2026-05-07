@@ -28,3 +28,18 @@ function checkType (value : StringOrNumber ) : string{
 }
 
 // console.log(checkType("asdjfla"))
+
+
+
+//* Problem 4
+function getProperty <T, K extends keyof T> (obj : T , key : K) : T[K] {
+     return obj[key];
+}
+const user = {
+     id: 4,
+     name: "salman farcy",
+     age: 26,
+}
+
+const result6 = getProperty(user, 'name')
+console.log(result6)
